@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <ImageButton
+        android:id="@+id/ibnEnable"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_weight="0.3"
+        android:contentDescription="Enable Smart Phone"
+        android:src="@drawable/newone"
+        android:text="Enable Smart EarPhone" />
+
+    <TextView
+        android:id="@+id/tvEnable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:text="Enable Smart Phone" 
+        android:textAlignment="center"
+        />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1" />
+
+    <ImageButton
+        android:id="@+id/ibnDisable"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_weight="0.3"
+        android:contentDescription="Disable Smart Phone"
+        android:src="@drawable/switch_off"
+        android:text="Disable Smart EarPhone" />
+
+    <TextView
+        android:id="@+id/tvDisable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:text="Disable Smart Phone" 
+        android:textAlignment="center"/>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1" />
+
+</LinearLayout>

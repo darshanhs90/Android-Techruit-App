@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+        <Button  android:layout_height="wrap_content" android:id="@+id/picImagebutton" android:layout_width="fill_parent"  android:layout_marginLeft="10dp" android:layout_marginRight="10dp"  android:text="Select an image"></Button>
+        <Button  android:layout_height="wrap_content" android:id="@+id/takeImagebutton" android:layout_width="fill_parent"  android:layout_marginLeft="10dp" android:layout_marginRight="10dp"  android:text="Take an image"></Button>
+        
+        <TextView android:text="Easily Convert Image to textual data"  android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/imageName" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_below="@+id/picImagebutton" android:layout_centerHorizontal="true" android:layout_marginLeft="20dp" android:layout_marginRight="10dp" android:layout_marginTop="20dp"></TextView>
+   <Button  android:layout_height="wrap_content" android:id="@+id/convert" android:layout_width="fill_parent"  android:layout_marginLeft="10dp" android:layout_marginRight="10dp"  android:text="convert"></Button>
+        
+       
+</LinearLayout>
