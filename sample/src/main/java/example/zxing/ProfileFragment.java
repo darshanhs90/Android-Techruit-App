@@ -19,7 +19,7 @@ import java.io.InputStream;
 public  class ProfileFragment extends Fragment {
     private String toast;
 
-    public ProfileFragment(Activity activity) {
+    public ProfileFragment() {
     }
 
 
@@ -30,7 +30,9 @@ public  class ProfileFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
        WebView wv =(WebView)view.findViewById(R.id.ivQR);
         wv.getSettings().setJavaScriptEnabled(true);
-       wv.loadUrl("http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=darshanhs&qzone=1&margin=0&size=300x300&center=true");
+        String str=getActivity().getIntent().getExtras().get("email").toString();
+        String doc="http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data="+str+"&qzone=1&margin=0&size=300x300&center=true";
+       wv.loadUrl(doc);
 
 
         return view;

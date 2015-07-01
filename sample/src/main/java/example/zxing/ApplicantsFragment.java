@@ -13,7 +13,7 @@ import android.widget.Toast;
 public  class ApplicantsFragment extends Fragment {
     private String toast;
     SwipeRefreshLayout mSwipeView;
-    public ApplicantsFragment(Activity activity) {
+    public ApplicantsFragment() {
     }
 
 

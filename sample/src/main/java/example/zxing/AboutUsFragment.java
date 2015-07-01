@@ -10,9 +10,10 @@ import android.view.ViewGroup;
 
 public  class AboutUsFragment extends Fragment {
     private String toast;
-
-    public AboutUsFragment(Activity activity) {
+    public AboutUsFragment() {
     }
+//    public AboutUsFragment(Activity activity) {
+//    }
 
 
 

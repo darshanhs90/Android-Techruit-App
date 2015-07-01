@@ -21,7 +21,7 @@ public  class JobsFragment extends Fragment   {
     SwipeRefreshLayout mSwipeView;
     SearchView mSearchView;
      TextView textView1,textView2;
-    public JobsFragment(Activity activity) {
+    public JobsFragment() {
     }
 
 

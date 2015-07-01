@@ -28,12 +28,13 @@ public class PostLoginActivity extends ActionBarActivity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
-
+    public  String email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.postloginactivity);
-
+        email=getIntent().getExtras().get("email").toString();
+        Toast.makeText(getApplicationContext(),email,Toast.LENGTH_SHORT).show();
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
@@ -43,7 +44,9 @@ public class PostLoginActivity extends ActionBarActivity
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
     }
-
+    public String getmail(){
+        return email;
+    }
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
@@ -51,22 +54,22 @@ public class PostLoginActivity extends ActionBarActivity
         //.makeText(this, " " + position, Toast.LENGTH_LONG).show();
        switch(position) {
            case 0://homepage fragment
-               fragmentManager.beginTransaction().replace(R.id.container, new HomeFragment(this)).commit();
+               fragmentManager.beginTransaction().replace(R.id.container, new HomeFragment()).commit();
                break;
            case 1://qrscanner fragment
                fragmentManager.beginTransaction().replace(R.id.container, new ScanFragment()).commit();
                break;
            case 2://jobs fragment
-               fragmentManager.beginTransaction().replace(R.id.container, new JobsFragment(this)).commit();
+               fragmentManager.beginTransaction().replace(R.id.container, new JobsFragment()).commit();
                break;
            case 3://applicants fragment
-               fragmentManager.beginTransaction().replace(R.id.container, new ApplicantsFragment(this)).commit();
+               fragmentManager.beginTransaction().replace(R.id.container, new ApplicantsFragment()).commit();
                break;
            case 4://profile fragment
-               fragmentManager.beginTransaction().replace(R.id.container, new ProfileFragment(this)).commit();
+               fragmentManager.beginTransaction().replace(R.id.container, new ProfileFragment()).commit();
                break;
            case 5://aboutus fragment
-               fragmentManager.beginTransaction().replace(R.id.container, new AboutUsFragment(this)).commit();
+               fragmentManager.beginTransaction().replace(R.id.container, new AboutUsFragment()).commit();
                break;
        }
     }
